@@ -2,13 +2,13 @@
     <div class="container-fluid">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="navbar-brand">Dashboard</a>
+                <a class="navbar-brand" href="/dashboard">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="navbar-brand">Pelaggan</a>
+                <a class="navbar-brand" href="/pelanggan">Pelaggan</a>&nbsp;
             </li>
             <li class="nav-item">
-                <a class="navbar-brand">Produk</a>
+                <a class="navbar-brand" href="/produk">Produk</a>&nbsp;
             </li>
             <li class="nav-item">
                 <a class="navbar-brand">Tarnsaks</a>

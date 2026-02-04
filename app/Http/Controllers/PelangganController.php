@@ -10,8 +10,8 @@ class PelangganController extends Controller
 {
     //
     public function index(){
-        $pelanggans = Pelanggan::simplePaginate(1);
-        return view('pelanggan.index', compact('pelanggan'));
+        $pelanggans = Pelanggan::simplePaginate(10);
+        return view('pelanggan.index', compact('pelanggans'));
     }
     public function create(){
         return view('pelanggan.create');

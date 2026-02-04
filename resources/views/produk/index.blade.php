@@ -13,35 +13,35 @@
 
                     <div class="card">
                         <div class="card-header">
-                            data pelanggan
+                            data produk
                         </div>
 
                         <div class="card-body">
                             <div class="d-flex justify-content-end">
-                                <a href="/pelanggan/create" class="btn btn-secondary">tambah pelanggan</a>
+                                <a href="/produk/create" class="btn btn-secondary">tambah produk</a>
                             </div>
 
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama Pelanggan</th>
-                                        <th>Alamat</th>
-                                        <th>No Telpon</th>
+                                        <th>Nama Produk</th>
+                                        <th>Harga</th>
+                                        <th>Stok</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
-                                    @forelse ($pelanggans as $item)
+                                    @forelse ($produks as $item)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $item->NamaPelanggan }}</td>
-                                            <td>{{ $item->Alamat }}</td>
-                                            <td>{{ $item->NomorTlp }}</td>
-                                            <td><a href="/pelanggan/edit/{{ $item->PelangganId }}"
+                                            <td>{{ $item->NamaProduk }}</td>
+                                            <td>{{ $item->Harga }}</td>
+                                            <td>{{ $item->Stok }}</td>
+                                            <td><a href="/produk/edit/{{ $item->ProdukId }}"
                                                     class="btn btn-warning">Edit</a>
-                                                <form action="/pelanggan/delete/{{ $item->PelangganId }}" method="post">
+                                                <form action="/produk/delete/{{ $item->ProdukId }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">Hapus</button>
@@ -51,12 +51,12 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="5">Tidak ada data pelanggan</td>
+                                            <td colspan="5">Tidak ada data produk</td>
                                         </tr>
                                     @endforelse
                                 </tbody>
                             </table>
-                            {{ $pelanggans->links() }}
+                            {{ $produks->links() }}
                         </div>
                     </div>
                 </div>
